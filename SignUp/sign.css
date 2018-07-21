@@ -1,0 +1,22 @@
+body {
+	background: url(../img/background.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+html {
+	height: 100%;
+}
+
+img {
+	height: 100px;
+}
+
+.content {
+	margin: 50px 20px 40px;
+	background-color: white;
+}
+
+.custom-select.is-invalid, .form-control.is-invalid, .was-validated .custom-select:invalid, .was-validated .form-control:invalid {
+	border-color: green;
+}
