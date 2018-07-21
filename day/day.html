@@ -1,21 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
 	<meta name = "viewport" content="width=device-width,initial-scale=1.0 user-scalable = no , maximum-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="day.css">
     <link rel="stylesheet" href="asset/css/default.css" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
 </head>
 <body>
+	<div class="side-bar"> 
+  	<a href="#" class="icon-qq">Year</a> 
+  	<a href="#" class="icon-chat">Month</a> 
+  	<a target="_blank" href="#" class="icon-blog">Day</a> 
+  </div>
+
 	<div class="container">
+		<div class="routine">
+			<h1>Tell me what are you doing?</h1>
+			<img src="">
+			<input type="" name="">
+		</div>
+
+
+		<div class="video">
 		<video id="video" playsinline=""></video>
 
-		<div class="footer">
-		<input type="button" value="AR" id="openCamera" />
+		<input type="button" class="btn btn-outline-info" value="AR" id="openCamera" />
 		<select class="none" id="videoDevice"></select>
-		<input class="none" type="button" value="开始" id="start" />
+		<input class="none" type="button" class="btn btn-outline-info"value="Let's begin" id="start" />
 		<!-- <input class="none" type="button" value="停止识别" id="stop" /> -->
 		</div>
+		
+	</div>
 
 		<script type="text/javascript" src="asset/libs/three/three.min.js"></script>
 		<script type="text/javascript" src="asset/js/adapter.js"></script>
@@ -25,6 +43,5 @@
 		<script type="text/javascript" src="asset/libs/three/inflate.min.js"></script>
 		<script type="text/javascript" src="asset/libs/three/OrbitControls.js"></script>
 		<script type="text/javascript" src="asset/js/app.js"></script>
-	</div>
 </body>
 </html>
