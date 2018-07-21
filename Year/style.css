@@ -67,13 +67,6 @@ input {
   margin: auto 20%;
 }
 
-#ar {
-  height: 50px;
-  display: inline;
-  float: right;
-
-}
-
 @keyframes myfirst
 {
   0%   {opacity: 0;}
