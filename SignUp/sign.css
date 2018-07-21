@@ -13,10 +13,33 @@ img {
 }
 
 .content {
-	margin: 50px 20px 40px;
+	margin: 30px;
 	background-color: white;
+}
+
+.form-row>.col, .form-row>[class*=col-] {
+	padding-top: 30px;
 }
 
 .custom-select.is-invalid, .form-control.is-invalid, .was-validated .custom-select:invalid, .was-validated .form-control:invalid {
 	border-color: green;
+}
+
+form {
+	padding: 20px;
+}
+
+button, select {
+border: 1px solid green;
+    background: white;
+}
+
+#footer {
+	font-weight: lighter;
+	color: white;
+	text-align: center;
+	font-size: 12px;
+	text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+				0px 8px 13px rgba(0, 0, 0, 0.1),
+				0px 18px 23px rgba(0, 0, 0, 0.4);
 }
