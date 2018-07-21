@@ -6,34 +6,45 @@
 	<meta name = "viewport" content="width=device-width,initial-scale=1.0 user-scalable = no , maximum-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="day.css">
     <link rel="stylesheet" href="asset/css/default.css" />
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script type="text/javascript">
+	    function startTime()
+			{
+				var today=new Date()
+				var h=today.getHours()
+				var m=today.getMinutes()
+				var s=today.getSeconds()
+				// add a zero in front of numbers<10
+				m=checkTime(m)
+				s=checkTime(s)
+				document.getElementById('txt').innerHTML=h+":"+m+":"+s
+				t=setTimeout('startTime()',500)
+			}
 
+			function checkTime(i)
+			{
+				if (i<10) {i="0" + i}
+				return i
+			}
+	</script>
 </head>
-<body>
-	<div class="side-bar"> 
-  	<a href="#" class="icon-qq">Year</a> 
-  	<a href="#" class="icon-chat">Month</a> 
-  	<a target="_blank" href="#" class="icon-blog">Day</a> 
-  </div>
-
+<body onload="startTime()">
 	<div class="container">
-		<div class="routine">
-			<h1>Tell me what are you doing?</h1>
-			<img src="">
-			<input type="" name="">
-		</div>
 
-
-		<div class="video">
 		<video id="video" playsinline=""></video>
 
-		<input type="button" class="btn btn-outline-info" value="AR" id="openCamera" />
-		<select class="none" id="videoDevice"></select>
-		<input class="none" type="button" class="btn btn-outline-info"value="Let's begin" id="start" />
-		<!-- <input class="none" type="button" value="停止识别" id="stop" /> -->
+		<div class="footer">
+
+			<div id="txt"></div>
+			<input type="button" value="AR" id="openCamera" />
+			<select class="none" id="videoDevice"></select>
+			<input class="none" type="button" value="开始" id="start" />
+			<!-- <input class="none" type="button" value="停止识别" id="stop" /> -->
 		</div>
-		
-	</div>
+		<script type="text/javascript">
+
+
+		</script>
+
 
 		<script type="text/javascript" src="asset/libs/three/three.min.js"></script>
 		<script type="text/javascript" src="asset/js/adapter.js"></script>
