@@ -1,0 +1,65 @@
+body {
+	background: #ecf0f1;
+	padding: 2em;
+}
+
+
+.side-bar {
+  color: white;
+  width: 66px;
+  position: fixed;
+  bottom: 25%;
+  right: 20px;
+  font-size: 15px;
+  line-height: 40px;
+  z-index: 100;
+}
+
+
+.side-bar a {
+  width: 100px;
+  height: 40px;
+  display: inline-block;
+  background-color: rgb(70,130,180);
+  margin-bottom: 3px;
+  border-radius: 20px;
+}
+.side-bar a:hover {
+  background-color: #669fdd;
+}
+
+.side-bar .icon-chat:hover .chat-tips {
+  display: block;
+}
+
+.chat-tips {padding: 20px;border: 1px solid #d1d2d6;position: absolute;right: 78px;top: -55px;background-color: #fff;display: none;}
+
+.chat-tips i {
+  width: 9px;height: 16px;display: inline-block;position: absolute;right: -9px;top: 80px;background-position:-88px -350px;
+}
+
+.chat-tips img {
+  width: 138px;height: 138px;
+}
+
+.icon-qq, .icon-chat, .icon-blog {
+  color: white;
+  text-align: center;
+}
+
+#navbar-c {
+    background-color: 0;
+}
+
+input {
+  border-bottom: 1px solid;
+}
+
+.routine {
+  margin-top: 120%;
+}
+
+#micro {
+  height: 50px;
+  margin: auto 44%;
+}
