@@ -1,0 +1,140 @@
+.side-bar a,.chat-tips i {
+  background: url(dmy.png) no-repeat;
+}
+
+.side-bar {
+  color: white;
+  width: 66px;
+  position: fixed;
+  bottom: 25%;
+  right: 20px;
+  font-size: 15px;
+  line-height: 40px;
+  z-index: 100;
+}
+
+
+.side-bar a {
+  width: 100px;
+  height: 40px;
+  display: inline-block;
+  background-color: rgb(70,130,180);
+  margin-bottom: 3px;
+  border-radius: 20px;
+}
+.side-bar a:hover {
+  background-color: #669fdd;
+}
+
+.side-bar .icon-chat:hover .chat-tips {
+  display: block;
+}
+
+.chat-tips {padding: 20px;border: 1px solid #d1d2d6;position: absolute;right: 78px;top: -55px;background-color: #fff;display: none;}
+
+.chat-tips i {
+  width: 9px;height: 16px;display: inline-block;position: absolute;right: -9px;top: 80px;background-position:-88px -350px;
+}
+
+.chat-tips img {
+  width: 138px;height: 138px;
+}
+
+.icon-qq, .icon-chat, .icon-blog {
+  color: white;
+  text-align: center;
+}
+
+a {
+  color: white;
+  text-align: center;
+}
+
+input {
+  border-bottom: 1px solid;
+}
+
+.routine {
+  margin-top: 120%;
+}
+
+#micro {
+  height: 50px;
+  margin: auto 44%;
+}
+
+.input-group>.custom-select:not(:first-child), .input-group>.form-control:not(:first-child) {
+  margin: auto 20%;
+}
+
+@keyframes myfirst
+{
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+html{
+  min-height: 100%;
+  overflow: hidden;
+}
+body{
+  height: calc(100vh - 8em);
+  padding: 0 2em;
+  color: rgba(255,255,255,.75);
+  font-family: 'Anonymous Pro', monospace;
+  background-color: rgb(25,25,25);
+}
+
+.line-1{
+    color: #3e6992;
+    font-family: Lato;
+    position: relative;
+    top: 50%;
+    width: 20em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 130%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+/* Animation */
+.anim-typewriter1{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 11.5em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+.anim-typewriter2{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 11.7em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+#nav {
+  margin-bottom: 10%;
+}
+

@@ -1,213 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-	<meta name = "viewport" content="width=device-width,initial-scale=1.0 user-scalable = no , maximum-scale=1.0">
+	<title>Month@ARclock</title>
+	<meta charset="utf-8">
+    <meta name = "viewport" content="width=device-width,initial-scale=1.0 user-scalable = no , maximum-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link href='http://fonts.font.im/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="month.css">
-    <link rel="stylesheet" href="asset/css/default.css" />
 
-    <script type="text/javascript">
-    	var blue=0;
-    	var blueAngle=0;
-    	var isBlue = false;
-    	var yellow=0;
-    	var yellowAngle=0;
-    	var isYellow = false;
-    	var green=0;
-    	var greenAngle=0;
-    	var isGreen = false;
-    	var red=0;
-    	var redAngle=0;
-    	var isRed = false;
-    	var purple=0;
-    	var purpleAngle=0;
-    	var isPurple = false;
-	    function startTime()
-			{
-				var today=new Date()
-				var h=today.getHours()
-				var m=today.getMinutes()
-				var s=today.getSeconds()
-				// add a zero in front of numbers<10
-				m=checkTime(m)
-				s=checkTime(s)
-				document.getElementById('txt').innerHTML=h+":"+m+":"+s
-				t=setTimeout('startTime()',500)
-			}
-
-		function checkTime(i)
-			{
-				if (i<10) {i="0" + i}
-				return i
-			}
-
-		function startTimeBlue()
-			{
-				if(isBlue){
-					blue = blue + 5;
-					blueAngle = blueAngle  +5;
-				}
-				if (blueAngle <=180 ){
-					rotate(blue,"white1");
-					document.getElementById("blue1").style.opacity=1;
-					document.getElementById("blue2").style.opacity=0;
-				}
-
-				else if (blueAngle <=360 ){
-					rotate(blue-180,"blue2");
-					document.getElementById("white1").style.opacity=0;
-					document.getElementById("blue2").style.opacity=1;
-				}
-				else {
-					document.getElementById("blue2").style.opacity=1;
-				}
-				t=setTimeout('startTimeBlue()',500);
-			}
-
-		function startTimeYellow()
-			{
-				if(isYellow){
-					yellow = yellow + 5;
-					yellowAngle = yellowAngle  +5;
-				}
-				if (yellowAngle <=180 ){
-					rotate(yellow,"white2");
-					document.getElementById("yellow1").style.opacity=1;
-					document.getElementById("yellow2").style.opacity=0;
-				}
-
-				else if (yellowAngle <=360 ){
-					rotate(yellow-180,"yellow2");
-					document.getElementById("white2").style.opacity=0;
-					document.getElementById("yellow2").style.opacity=1;
-				}
-				else {
-					document.getElementById("yellow2").style.opacity=1;
-				}
-				t=setTimeout('startTimeYellow()',500);
-			}
-
-		function startTimeGreen()
-			{
-				if(isGreen){
-					green = green + 5;
-					greenAngle = greenAngle  +5;
-				}
-				if (greenAngle <=180 ){
-					rotate(green,"white3");
-					document.getElementById("green1").style.opacity=1;
-					document.getElementById("green2").style.opacity=0;
-				}
-
-				else if (greenAngle <=360 ){
-					rotate(green-180,"green2");
-					document.getElementById("white3").style.opacity=0;
-					document.getElementById("green2").style.opacity=1;
-				}
-				else {
-					document.getElementById("green2").style.opacity=1;
-				}
-				t=setTimeout('startTimeGreen()',500);
-			}	
-
-		function startTimeRed()
-			{
-				if(isRed){
-					red = red + 5;
-					redAngle = redAngle  +5;
-				}
-				if (redAngle <=180 ){
-					rotate(red,"white4");
-					document.getElementById("red1").style.opacity=1;
-					document.getElementById("red2").style.opacity=0;
-				}
-
-				else if (redAngle <=360 ){
-					rotate(red-180,"red2");
-					document.getElementById("white4").style.opacity=0;
-					document.getElementById("red2").style.opacity=1;
-				}
-				else {
-					document.getElementById("red2").style.opacity=1;
-				}
-				t=setTimeout('startTimeRed()',500);
-			}
-
-		function startTimePurple()
-			{
-				if(isPurple){
-					purple = purple + 5;
-					purpleAngle = purpleAngle  +5;
-				}
-				if (purpleAngle <=180 ){
-					rotate(purple,"white5");
-					document.getElementById("purple1").style.opacity=1;
-					document.getElementById("purple2").style.opacity=0;
-				}
-
-				else if (purpleAngle <=360 ){
-					rotate(purple-180,"purple2");
-					document.getElementById("white5").style.opacity=0;
-					document.getElementById("purple2").style.opacity=1;
-				}
-				else {
-					document.getElementById("purple2").style.opacity=1;
-				}
-				t=setTimeout('startTimePurple()',500);
-			}
-		function rotate(value,color)
-		{
-			document.getElementById(color).style.webkitTransform="rotate(" + value + "deg)";
-			document.getElementById(color).style.msTransform="rotate(" + value + "deg)";
-			document.getElementById(color).style.MozTransform="rotate(" + value + "deg)";
-			document.getElementById(color).style.OTransform="rotate(" + value + "deg)";
-			document.getElementById(color).style.transform="rotate(" + value + "deg)";
-		}
-		function antiblue(){
-			isBlue = !isBlue;
-		}
-		function antiyellow(){
-			isYellow = !isYellow;
-		}
-		function antigreen(){
-			isGreen = !isGreen;
-		}
-		function antired(){
-			isRed= !isRed;
-		}
-		function antipurple(){
-			isPurple = !isPurple;
-		}
-	</script>
 </head>
+<body>
+	<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+        <a class="navbar-brand" href="../index.html"><img src="../image/onlyLogo.png" height="30px"></a>
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+        <a class="nav-link disabled" href="#"><img src="../image/logo.png" height="30px"></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><img src="../image/ar.png" height="30px"></button>
+    </form>
+  </div>
+</nav>
 
-<body onload="startTime();startTimeBlue();startTimeYellow();startTimeGreen();startTimePurple();startTimeRed()" >
-	<div class="container" >
-			<img src="../image/ring_white1.png" id ="white1" style="position:absolute;z-index:2;float:left;"></img>
-			<img src="../image/ring_blue.png"  id ="blue1" style="position:absolute;z-index:1;float:left;" ></img>
-			<img src="../image/ring_blue.png"  id ="blue2" style="position:absolute;z-index:2;float:left;"></img>
-			<img src="../image/ring_white2.png" id ="white2" style="position:absolute;z-index:2;float:left;"></img>
-			<img src="../image/ring_yellow.png"  id ="yellow1" style="position:absolute;z-index:1;float:left;" ></img>
-			<img src="../image/ring_yellow.png"  id ="yellow2" style="position:absolute;z-index:2;float:left;"></img>
-			<img src="../image/ring_white3.png" id ="white3" style="position:absolute;z-index:2;float:left;"></img>
-			<img src="../image/ring_green.png"  id ="green1" style="position:absolute;z-index:1;float:left;" ></img>
-			<img src="../image/ring_green.png"  id ="green2" style="position:absolute;z-index:2;float:left;"></img>
-			<img src="../image/ring_white4.png" id ="white4" style="position:absolute;z-index:2;float:left;"></img>
-			<img src="../image/ring_red.png"  id ="red1" style="position:absolute;z-index:1;float:left;" ></img>
-			<img src="../image/ring_red.png"  id ="red2" style="position:absolute;z-index:2;float:left;"></img>
-			<img src="../image/ring_white5.png" id ="white5" style="position:absolute;z-index:2;float:left;"></img>
-			<img src="../image/ring_purple.png"  id ="purple1" style="position:absolute;z-index:1;float:left;" ></img>
-			<img src="../image/ring_purple.png"  id ="purple2" style="position:absolute;z-index:2;float:left;"></img>
-			<div id="txt"></div>
+	<div class="side-bar">
+           <a href="../Year/year.html" class="icon-qq">Year</a>
+           <a href="../month/month.html" class="icon-chat">Month</a>
+           <a target="_blank" href="../day/day.html" class="icon-blog">Day</a>
+    </div>
 
-			<button onclick="antiblue()">BLUE</button>
-			<button onclick="antiyellow()">YELLOW</button>
-			<button onclick="antigreen()">GREEN</button>
-			<button onclick="antired()">RED</button>
-			<button onclick="antipurple()">PURPLE</button>
+    <div class="routine">
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
 
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="I am studying English">
+        </div>
 
-
-	</div>
+        <a class="nav-link" href="#"><img id="micro" src="../image/micro.png"></a>
+    </div>
 </body>
 </html>

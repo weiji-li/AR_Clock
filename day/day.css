@@ -1,4 +1,7 @@
 body {
+	background: white;
+	background-position: center;
+	background-size: cover;
 }
 
 
@@ -183,5 +186,3 @@ button{
 	-webkit-transform-origin: 0;
 	transform-origin: 0;
 }
-
-
