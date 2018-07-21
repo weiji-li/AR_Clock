@@ -192,6 +192,7 @@
 				}
 				function killall(){
 					kill = true;
+					document.getElementById("routine").style.opacity=0;
 					document.getElementById("white1").style.opacity=0;
 					document.getElementById("white2").style.opacity=0;
 					document.getElementById("white3").style.opacity=0;
@@ -220,7 +221,9 @@
 					</li>
 				</ul>
 				<form class="form-inline my-2 my-lg-0">
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="openCamera" onclick="killall()"><img src="../image/ar.png" height="30px" ></button>
+					<!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="openCamera" onclick="killall()"><img src="../image/ar.png" height="30px" ></button>-->
+					<!-- <input type="button" value="AR" id="openCamera" onclick="killall()" /> -->
+					<input class="btn btn-outline-success my-2 my-sm-0" type="button" id="openCamera" onclick="killall()" value="AR" height="30px" />
 				</form>
 			</div>
 		</nav>
@@ -256,10 +259,10 @@
 				<!-- <input type="button" value="AR" id="openCamera" onclick="killall()" /> -->
 				<select class="none" id="videoDevice"></select>
 				<input class="none" type="button" value="开始" id="start" />
-				<!-- <input class="none" type="button" value="停止识别" id="stop" /> -->
+
 			</div>
 
-			<div class="routine">
+			<div id="routine">
 				<div class="input-group input-group-sm mb-3">
 					<div class="input-group-prepend">
 
