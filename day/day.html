@@ -5,17 +5,45 @@
 	<meta name = "viewport" content="width=device-width,initial-scale=1.0 user-scalable = no , maximum-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="day.css">
     <link rel="stylesheet" href="asset/css/default.css" />
+    <script type="text/javascript">
+	    function startTime()
+			{
+				var today=new Date()
+				var h=today.getHours()
+				var m=today.getMinutes()
+				var s=today.getSeconds()
+				// add a zero in front of numbers<10
+				m=checkTime(m)
+				s=checkTime(s)
+				document.getElementById('txt').innerHTML=h+":"+m+":"+s
+				t=setTimeout('startTime()',500)
+			}
+
+			function checkTime(i)
+			{
+				if (i<10) {i="0" + i}
+				return i
+			}
+	</script>
 </head>
-<body>
+<body onload="startTime()">
 	<div class="container">
+
 		<video id="video" playsinline=""></video>
 
 		<div class="footer">
-		<input type="button" value="AR" id="openCamera" />
-		<select class="none" id="videoDevice"></select>
-		<input class="none" type="button" value="开始" id="start" />
-		<!-- <input class="none" type="button" value="停止识别" id="stop" /> -->
+
+			<div id="txt"></div>
+			<input type="button" value="AR" id="openCamera" />
+			<select class="none" id="videoDevice"></select>
+			<input class="none" type="button" value="开始" id="start" />
+			<!-- <input class="none" type="button" value="停止识别" id="stop" /> -->
 		</div>
+		<script type="text/javascript">
+		
+
+		</script>
+
 
 		<script type="text/javascript" src="asset/libs/three/three.min.js"></script>
 		<script type="text/javascript" src="asset/js/adapter.js"></script>

@@ -42,7 +42,7 @@ const ThreeHelper = function(){
     this.loadObject = function(modelUrl) {
         const loader = new THREE.FBXLoader();
         loader.load(modelUrl, (object) => {
-            object.scale.setScalar(0.01);
+            object.scale.setScalar(0.08);
             object.position.set(0, 0, 0);
             this.scene.add(object);
             if (object.animations.length > 0) {

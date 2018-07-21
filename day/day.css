@@ -8,3 +8,10 @@ body {
 html {
 	height: 100%;
 }
+
+#txt{
+	font-family: Lato, light;
+	color: white;
+	text-align: center;
+	padding-top: 25%;
+}
