@@ -1,3 +1,4 @@
+
 const webAR = new WebAR(1000, '/webar/recognize');
 
 const threeHelper = new ThreeHelper();
@@ -14,7 +15,7 @@ document.querySelector('#openCamera').addEventListener('click', function(){
                 // 打开摄像头成功
                 // 将视频铺满全屏(简单处理)
                 let videoWidth = video.offsetWidth;
-                let videoHeight = video.offsetHeight;
+                let videoHeight = 500;
 
                 if (window.innerWidth < window.innerHeight) {
                     // 竖屏

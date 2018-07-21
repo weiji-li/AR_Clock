@@ -23,7 +23,7 @@ body {
     color: #FF0000;
 }
 
-.footer {
+#footer {
     position: fixed;
     bottom: 10px;
 

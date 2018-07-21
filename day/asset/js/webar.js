@@ -12,8 +12,8 @@ const WebAR = function(interval, recognizeUrl) {
     var videoElement = null;
     var videoDeviceElement = null;
 
-    var canvasElement = null;
-    var canvasContext = null;
+    //var canvasElement = null;
+//    var canvasContext = null;
 
     var timer = null;
     var isRecognizing = false;
@@ -52,8 +52,8 @@ const WebAR = function(interval, recognizeUrl) {
                         videoDeviceElement.style.display = 'inline-block';
 
                         // 创建canvas，截取摄像头图片时使用
-                        canvasElement = document.createElement('canvas');
-                        canvasContext = canvasElement.getContext('2d');
+                        //canvasElement = document.createElement('canvas');
+                       // canvasContext = canvasElement.getContext('2d');
 
                         resolve(true);
                     }
@@ -84,8 +84,8 @@ const WebAR = function(interval, recognizeUrl) {
             video: {deviceId: {exact: deviceId}}
         };
 
-        canvasElement.setAttribute('width', videoSetting.width + 'px');
-        canvasElement.setAttribute('height', videoSetting.height + 'px');
+        //canvasElement.setAttribute('width', videoSetting.width + 'px');
+        //canvasElement.setAttribute('height', videoSetting.height + 'px');
 
         // 如果是切换摄像头，则需要先关闭。
         if (videoElement.srcObject) {
@@ -115,8 +115,8 @@ const WebAR = function(interval, recognizeUrl) {
      * @returns {string}
      */
     this.captureVideo = function() {
-        canvasContext.drawImage(videoElement, 0, 0, videoSetting.width, videoSetting.height);
-        return canvasElement.toDataURL('image/jpeg', 0.5).split('base64,')[1];
+        //canvasContext.drawImage(videoElement, 0, 0, videoSetting.width, videoSetting.height);
+        //return canvasElement.toDataURL('image/jpeg', 0.5).split('base64,')[1];
     };
 
     /**

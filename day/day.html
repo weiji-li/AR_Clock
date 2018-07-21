@@ -5,7 +5,24 @@
 	<meta name = "viewport" content="width=device-width,initial-scale=1.0 user-scalable = no , maximum-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="day.css">
     <link rel="stylesheet" href="asset/css/default.css" />
+
     <script type="text/javascript">
+    	var blue=0;
+    	var blueAngle=0;
+    	var isBlue = false;
+    	var yellow=0;
+    	var yellowAngle=0;
+    	var isYellow = false;
+    	var green=0;
+    	var greenAngle=0;
+    	var isGreen = false;
+    	var red=0;
+    	var redAngle=0;
+    	var isRed = false;
+    	var purple=0;
+    	var purpleAngle=0;
+    	var isPurple = false;
+    	var kill = false;
 	    function startTime()
 			{
 				var today=new Date()
@@ -19,40 +36,224 @@
 				t=setTimeout('startTime()',500)
 			}
 
-			function checkTime(i)
+		function checkTime(i)
 			{
 				if (i<10) {i="0" + i}
 				return i
 			}
+
+		function startTimeBlue()
+			{
+				if (!kill) {
+					if(isBlue){
+						blue = blue + 5;
+						blueAngle = blueAngle  +5;
+					}
+					if (blueAngle <=180 ){
+						rotate(blue,"white1");
+						document.getElementById("blue1").style.opacity=1;
+						document.getElementById("blue2").style.opacity=0;
+					}
+
+					else if (blueAngle <=360 ){
+						rotate(blue-180,"blue2");
+						document.getElementById("white1").style.opacity=0;
+						document.getElementById("blue2").style.opacity=1;
+					}
+					else {
+						document.getElementById("blue2").style.opacity=1;
+					}
+					t=setTimeout('startTimeBlue()',500);
+				}
+			}
+
+		function startTimeYellow()
+			{
+				if (!kill) {
+					if(isYellow){
+						yellow = yellow + 5;
+						yellowAngle = yellowAngle  +5;
+					}
+					if (yellowAngle <=180 ){
+						rotate(yellow,"white2");
+						document.getElementById("yellow1").style.opacity=1;
+						document.getElementById("yellow2").style.opacity=0;
+					}
+
+					else if (yellowAngle <=360 ){
+						rotate(yellow-180,"yellow2");
+						document.getElementById("white2").style.opacity=0;
+						document.getElementById("yellow2").style.opacity=1;
+					}
+					else {
+						document.getElementById("yellow2").style.opacity=1;
+					}
+					t=setTimeout('startTimeYellow()',500);
+				}
+			}
+
+		function startTimeGreen()
+			{
+				if (!kill) {
+					if(isGreen){
+						green = green + 5;
+						greenAngle = greenAngle  +5;
+					}
+					if (greenAngle <=180 ){
+						rotate(green,"white3");
+						document.getElementById("green1").style.opacity=1;
+						document.getElementById("green2").style.opacity=0;
+					}
+
+					else if (greenAngle <=360 ){
+						rotate(green-180,"green2");
+						document.getElementById("white3").style.opacity=0;
+						document.getElementById("green2").style.opacity=1;
+					}
+					else {
+						document.getElementById("green2").style.opacity=1;
+					}
+					t=setTimeout('startTimeGreen()',500);
+				}
+			}	
+
+		function startTimeRed()
+			{
+				if (!kill) {
+					if(isRed){
+						red = red + 5;
+						redAngle = redAngle  +5;
+					}
+					if (redAngle <=180 ){
+						rotate(red,"white4");
+						document.getElementById("red1").style.opacity=1;
+						document.getElementById("red2").style.opacity=0;
+					}
+
+					else if (redAngle <=360 ){
+						rotate(red-180,"red2");
+						document.getElementById("white4").style.opacity=0;
+						document.getElementById("red2").style.opacity=1;
+					}
+					else {
+						document.getElementById("red2").style.opacity=1;
+					}
+					t=setTimeout('startTimeRed()',500);
+				}
+			}
+
+		function startTimePurple()
+			{
+				if (!kill) {
+					if(isPurple){
+						purple = purple + 5;
+						purpleAngle = purpleAngle  +5;
+					}
+					if (purpleAngle <=180 ){
+						rotate(purple,"white5");
+						document.getElementById("purple1").style.opacity=1;
+						document.getElementById("purple2").style.opacity=0;
+					}
+
+					else if (purpleAngle <=360 ){
+						rotate(purple-180,"purple2");
+						document.getElementById("white5").style.opacity=0;
+						document.getElementById("purple2").style.opacity=1;
+					}
+					else {
+						document.getElementById("purple2").style.opacity=1;
+					}
+					t=setTimeout('startTimePurple()',500);
+				}
+			}
+		function rotate(value,color)
+		{
+			document.getElementById(color).style.webkitTransform="rotate(" + value + "deg)";
+			document.getElementById(color).style.msTransform="rotate(" + value + "deg)";
+			document.getElementById(color).style.MozTransform="rotate(" + value + "deg)";
+			document.getElementById(color).style.OTransform="rotate(" + value + "deg)";
+			document.getElementById(color).style.transform="rotate(" + value + "deg)";
+		}
+		function antiblue(){
+			isBlue = !isBlue;
+		}
+		function antiyellow(){
+			isYellow = !isYellow;
+		}
+		function antigreen(){
+			isGreen = !isGreen;
+		}
+		function antired(){
+			isRed= !isRed;
+		}
+		function antipurple(){
+			isPurple = !isPurple;
+		}
+		function killall(){
+			kill = true;
+			document.getElementById("white1").style.opacity=0;
+			document.getElementById("white2").style.opacity=0;
+			document.getElementById("white3").style.opacity=0;
+			document.getElementById("white4").style.opacity=0;
+			document.getElementById("white5").style.opacity=0;
+			document.getElementById("blue1").style.opacity=0;
+			document.getElementById("blue2").style.opacity=0;
+			document.getElementById("yellow1").style.opacity=0;
+			document.getElementById("yellow2").style.opacity=0;
+			document.getElementById("green1").style.opacity=0;
+			document.getElementById("green2").style.opacity=0;
+			document.getElementById("red1").style.opacity=0;
+			document.getElementById("red2").style.opacity=0;
+			document.getElementById("purple1").style.opacity=0;
+			document.getElementById("purple2").style.opacity=0;
+		}
 	</script>
 </head>
-<body onload="startTime()">
-	<div class="container">
 
-		<video id="video" playsinline=""></video>
-
-		<div class="footer">
-
+<body onload="startTime();startTimeBlue();startTimeYellow();startTimeGreen();startTimePurple();startTimeRed()" >
+	<div class="container" >
+			<img src="../image/ring_white1.png" id ="white1" style="position:absolute;z-index:2;float:left;"></img>
+			<img src="../image/ring_blue.png"  id ="blue1" style="position:absolute;z-index:1;float:left;" ></img>
+			<img src="../image/ring_blue.png"  id ="blue2" style="position:absolute;z-index:2;float:left;"></img>
+			<img src="../image/ring_white2.png" id ="white2" style="position:absolute;z-index:2;float:left;"></img>
+			<img src="../image/ring_yellow.png"  id ="yellow1" style="position:absolute;z-index:1;float:left;" ></img>
+			<img src="../image/ring_yellow.png"  id ="yellow2" style="position:absolute;z-index:2;float:left;"></img>
+			<img src="../image/ring_white3.png" id ="white3" style="position:absolute;z-index:2;float:left;"></img>
+			<img src="../image/ring_green.png"  id ="green1" style="position:absolute;z-index:1;float:left;" ></img>
+			<img src="../image/ring_green.png"  id ="green2" style="position:absolute;z-index:2;float:left;"></img>
+			<img src="../image/ring_white4.png" id ="white4" style="position:absolute;z-index:2;float:left;"></img>
+			<img src="../image/ring_red.png"  id ="red1" style="position:absolute;z-index:1;float:left;" ></img>
+			<img src="../image/ring_red.png"  id ="red2" style="position:absolute;z-index:2;float:left;"></img>
+			<img src="../image/ring_white5.png" id ="white5" style="position:absolute;z-index:2;float:left;"></img>
+			<img src="../image/ring_purple.png"  id ="purple1" style="position:absolute;z-index:1;float:left;" ></img>
+			<img src="../image/ring_purple.png"  id ="purple2" style="position:absolute;z-index:2;float:left;"></img>
 			<div id="txt"></div>
-			<input type="button" value="AR" id="openCamera" />
+
+			<button onclick="antiblue()">BLUE</button>
+			<button onclick="antiyellow()">YELLOW</button>
+			<button onclick="antigreen()">GREEN</button>
+			<button onclick="antired()">RED</button>
+			<button onclick="antipurple()">PURPLE</button>
+			<div id="txt"></div>
+
+
+			<video id="video" playsinline=""></video> 
+			<div id="footer">
+			<input type="button" value="AR" id="openCamera" onclick="killall()" />
 			<select class="none" id="videoDevice"></select>
 			<input class="none" type="button" value="开始" id="start" />
 			<!-- <input class="none" type="button" value="停止识别" id="stop" /> -->
-		</div>
-		<script type="text/javascript">
-		
+			</div>
 
-		</script>
+			<script type="text/javascript" src="asset/libs/three/three.min.js"></script>
+			<script type="text/javascript" src="asset/js/adapter.js"></script>
+			<script type="text/javascript" src="asset/js/webar.js"></script>
+			<script type="text/javascript" src="asset/js/three-helper.js"></script>
+			<script type="text/javascript" src="asset/libs/three/FBXLoader.js"></script>
+			<script type="text/javascript" src="asset/libs/three/inflate.min.js"></script>
+			<script type="text/javascript" src="asset/libs/three/OrbitControls.js"></script>
+			<script type="text/javascript" src="asset/js/app.js"></script>
 
-
-		<script type="text/javascript" src="asset/libs/three/three.min.js"></script>
-		<script type="text/javascript" src="asset/js/adapter.js"></script>
-		<script type="text/javascript" src="asset/js/webar.js"></script>
-		<script type="text/javascript" src="asset/js/three-helper.js"></script>
-		<script type="text/javascript" src="asset/libs/three/FBXLoader.js"></script>
-		<script type="text/javascript" src="asset/libs/three/inflate.min.js"></script>
-		<script type="text/javascript" src="asset/libs/three/OrbitControls.js"></script>
-		<script type="text/javascript" src="asset/js/app.js"></script>
 	</div>
 </body>
 </html>
