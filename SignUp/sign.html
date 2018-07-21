@@ -5,6 +5,7 @@
 	<meta name = "viewport" content="width=device-width,initial-scale=1.0 user-scalable = no , maximum-scale=1.0">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="sign.css">
+	<script type="text/javascript" src="birthday.js"></script>
 </head>
 <body>
 	<div class="content">
@@ -28,27 +29,27 @@
 				</div>
 				<div class="form-row">
 					<div class="col-md-6 mb-3">
-						<label for="validationServer03">City</label>
-						<input type="text" class="form-control is-invalid" id="validationServer03" placeholder="City" required>
-						<div class="invalid-feedback">
-							Please provide a valid city.
-						</div>
+						Year <select id="selYear" class="form-control"></select>
+					</div>
+
+					<div class="col-md-3 mb-3">
+						Month <select id="selMonth" class="form-control"></select>
 					</div>
 					<div class="col-md-3 mb-3">
-						<label for="validationServer04">State</label>
-						<input type="text" class="form-control is-invalid" id="validationServer04" placeholder="State" required>
-						<div class="invalid-feedback">
-							Please provide a valid state.
-						</div>
-					</div>
-					<div class="col-md-3 mb-3">
-						<label for="validationServer05">Zip</label>
-						<input type="text" class="form-control is-invalid" id="validationServer05" placeholder="Zip" required>
-						<div class="invalid-feedback">
-							Please provide a valid zip.
-						</div>
+						Date <select id="selDay" class="form-control"></select>
 					</div>
 				</div>
+				<div class="form-group form-row">
+					<div class="col-md-6 mb-3">
+					<label for="exampleInputEmail1">Email address</label>
+					<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+					<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+				</div>
+				<div class="col-md-6 mb-3">
+					<label for="exampleInputPassword1">Password</label>
+					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+				</div>
+
 				<div class="form-group">
 					<div class="form-check">
 						<input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required>
@@ -60,10 +61,32 @@
 						</div>
 					</div>
 				</div>
-				<button class="btn btn-primary" type="submit">Submit form</button>
+</div>
+				<button class="btn btn-outline-info" type="submit">Submit form</button>
 			</form>
 		</div>
 	</div>
 
+	<div id="footer">
+				<p>Powered by 同学你airdrop没关</p>
+		
+	</div>
+
+
+
+
+
+	<!--完成出生日期的选择--需写在</body>前-->
+
+	<script type="text/javascript">
+		var selYear = window.document.getElementById("selYear");
+		var selMonth = window.document.getElementById("selMonth");
+		var selDay = window.document.getElementById("selDay");
+// 新建一个DateSelector类的实例，将三个select对象传进去
+new DateSelector(selYear, selMonth, selDay, 1995, 1, 17);
+// 也可以试试下边的代码
+// var dt = new Date(2004, 1, 29);
+// new DateSelector(selYear, selMonth ,selDay, dt);
+</script>
 </body>
 </html>
