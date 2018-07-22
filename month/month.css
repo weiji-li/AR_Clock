@@ -1,6 +1,7 @@
 body {
 	background: #ecf0f1;
 	padding: 2em;
+  padding-top: 120px;
 }
 
 
@@ -56,7 +57,7 @@ input {
 }
 
 .routine {
-  margin-top: 120%;
+  margin: 12%;
 }
 
 #micro {
