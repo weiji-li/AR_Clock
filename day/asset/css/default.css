@@ -12,14 +12,14 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    index: 1;
+    z-index: 0;
 }
 
 #debug {
     position: absolute;
     top: 0;
     left: 0;
-    index: 1000;
+    z-index: 1000;
     color: #FF0000;
 }
 
@@ -37,5 +37,5 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 99999;
+    z-index: 0;
 }

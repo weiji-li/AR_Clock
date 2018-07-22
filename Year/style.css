@@ -114,7 +114,7 @@ body{
 }
 @keyframes typewriter{
   from{width: 0;}
-  to{width: 11.5em;}
+  to{width: 13em;}
 }
 @keyframes blinkTextCursor{
   from{border-right-color: rgba(255,255,255,.75);}
@@ -127,7 +127,7 @@ body{
 }
 @keyframes typewriter{
   from{width: 0;}
-  to{width: 11.7em;}
+  to{width: 14em;}
 }
 @keyframes blinkTextCursor{
   from{border-right-color: rgba(255,255,255,.75);}
