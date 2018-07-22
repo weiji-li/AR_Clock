@@ -62,7 +62,7 @@ document.querySelector('#start').addEventListener('click', () => {
         // threeHelper.loadObject(meta.model);
 
         // 加载本地模型
-        threeHelper.loadObject('asset/model/test_v8.fbx');
+        threeHelper.loadObject('asset/model/test_v12.fbx');
 
 
     //});
