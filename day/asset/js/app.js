@@ -15,7 +15,7 @@ document.querySelector('#openCamera').addEventListener('click', function(){
                 // 打开摄像头成功
                 // 将视频铺满全屏(简单处理)
                 let videoWidth = video.offsetWidth;
-                let videoHeight = 500;
+                let videoHeight = video.offsetHeight;
 
                 if (window.innerWidth < window.innerHeight) {
                     // 竖屏
@@ -62,9 +62,9 @@ document.querySelector('#start').addEventListener('click', () => {
         // threeHelper.loadObject(meta.model);
 
         // 加载本地模型
-        threeHelper.loadObject('asset/model/trex_v3.fbx');
+        threeHelper.loadObject('asset/model/test_v8.fbx');
 
-        webAR.trace('加载模型啦啦 我真nb');
+
     //});
 }, false);
 

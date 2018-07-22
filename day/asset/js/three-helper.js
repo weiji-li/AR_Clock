@@ -1,7 +1,4 @@
 /**
-
-
-
  * ThreeJS帮助类
  * @constructor
  */
@@ -12,7 +9,7 @@ const ThreeHelper = function(){
 
     this.renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
     this.renderer.setSize(window.innerWidth, window.innerHeight);
-    //this.renderer.domElement.setAttribute('class', 'mainCanvas');
+    this.renderer.domElement.setAttribute('class', 'mainCanvas');
     document.body.appendChild(this.renderer.domElement);
 
     this.scene = new THREE.Scene();
@@ -45,8 +42,8 @@ const ThreeHelper = function(){
     this.loadObject = function(modelUrl) {
         const loader = new THREE.FBXLoader();
         loader.load(modelUrl, (object) => {
-            object.scale.setScalar(0.05);
-            object.position.set(0, 0, 0);
+            object.scale.setScalar(0.01);
+            object.position.set(0, -10, 0);
             this.scene.add(object);
             if (object.animations.length > 0) {
                 object.mixer = new THREE.AnimationMixer(object);
