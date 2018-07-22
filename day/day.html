@@ -229,29 +229,39 @@
 		</nav>
 
 		<div class="container" >
-			<img src="../image/ring_white1.png" id ="white1" style="position:absolute;z-index:2;float:left;"></img>
-			<img src="../image/ring_blue.png"  id ="blue1" style="position:absolute;z-index:1;float:left;" ></img>
-			<img src="../image/ring_blue.png"  id ="blue2" style="position:absolute;z-index:2;float:left;"></img>
-			<img src="../image/ring_white2.png" id ="white2" style="position:absolute;z-index:2;float:left;"></img>
-			<img src="../image/ring_yellow.png"  id ="yellow1" style="position:absolute;z-index:1;float:left;" ></img>
-			<img src="../image/ring_yellow.png"  id ="yellow2" style="position:absolute;z-index:2;float:left;"></img>
-			<img src="../image/ring_white3.png" id ="white3" style="position:absolute;z-index:2;float:left;"></img>
-			<img src="../image/ring_green.png"  id ="green1" style="position:absolute;z-index:1;float:left;" ></img>
-			<img src="../image/ring_green.png"  id ="green2" style="position:absolute;z-index:2;float:left;"></img>
-			<img src="../image/ring_white4.png" id ="white4" style="position:absolute;z-index:2;float:left;"></img>
-			<img src="../image/ring_red.png"  id ="red1" style="position:absolute;z-index:1;float:left;" ></img>
-			<img src="../image/ring_red.png"  id ="red2" style="position:absolute;z-index:2;float:left;"></img>
-			<img src="../image/ring_white5.png" id ="white5" style="position:absolute;z-index:2;float:left;"></img>
-			<img src="../image/ring_purple.png"  id ="purple1" style="position:absolute;z-index:1;float:left;" ></img>
-			<img src="../image/ring_purple.png"  id ="purple2" style="position:absolute;z-index:2;float:left;"></img>
-			<div id="txt"></div>
 
-			<button onclick="antiblue()">BLUE</button>
-			<button onclick="antiyellow()">YELLOW</button>
-			<button onclick="antigreen()">GREEN</button>
-			<button onclick="antired()">RED</button>
-			<button onclick="antipurple()">PURPLE</button>
-			<div id="txt"></div>
+			<div class="clock">
+				<img src="../image/ring_white1.png" id ="white1" style="position:absolute;z-index:2;float:left;"></img>
+				<img src="../image/ring_blue.png"  id ="blue1" style="position:absolute;z-index:1;float:left;" ></img>
+				<img src="../image/ring_blue.png"  id ="blue2" style="position:absolute;z-index:2;float:left;"></img>
+				<img src="../image/ring_white2.png" id ="white2" style="position:absolute;z-index:2;float:left;"></img>
+				<img src="../image/ring_yellow.png"  id ="yellow1" style="position:absolute;z-index:1;float:left;" ></img>
+				<img src="../image/ring_yellow.png"  id ="yellow2" style="position:absolute;z-index:2;float:left;"></img>
+				<img src="../image/ring_white3.png" id ="white3" style="position:absolute;z-index:2;float:left;"></img>
+				<img src="../image/ring_green.png"  id ="green1" style="position:absolute;z-index:1;float:left;" ></img>
+				<img src="../image/ring_green.png"  id ="green2" style="position:absolute;z-index:2;float:left;"></img>
+				<img src="../image/ring_white4.png" id ="white4" style="position:absolute;z-index:2;float:left;"></img>
+				<img src="../image/ring_red.png"  id ="red1" style="position:absolute;z-index:1;float:left;" ></img>
+				<img src="../image/ring_red.png"  id ="red2" style="position:absolute;z-index:2;float:left;"></img>
+				<img src="../image/ring_white5.png" id ="white5" style="position:absolute;z-index:2;float:left;"></img>
+				<img src="../image/ring_purple.png"  id ="purple1" style="position:absolute;z-index:1;float:left;" ></img>
+				<img src="../image/ring_purple.png"  id ="purple2" style="position:absolute;z-index:2;float:left;"></img>
+				<div id="txt"></div>
+			</div>
+			
+
+			<div class="col">
+				<div class="row">
+					<button onclick="antiblue()" class="btn btn-outline-info btn-sm">Doing Laundry</button>
+					<button onclick="antiyellow()" class="btn btn-outline-warning btn-sm">Studying Java</button>
+				</div>
+				<div class="row">
+					<button onclick="antigreen()" class="btn btn-outline-success btn-sm">Watching movies</button>
+					<button onclick="antired()" class="btn btn-outline-danger btn-sm">Reading</button>
+					<button onclick="antipurple()" class="btn btn-outline-info btn-sm">Math</button>
+				</div>
+			</div>
+
 
 
 			<video id="video" playsinline=""></video>
@@ -262,15 +272,21 @@
 
 			</div>
 
+			<div class="side-bar">
+				<a href="../Year/year.html" class="icon-qq">Year</a>
+				<a href="../month/month.html" class="icon-chat">Month</a>
+				<a href="../day/day.html" class="icon-blog">Day</a>
+			</div>
+
 			<div id="routine">
 				<div class="input-group input-group-sm mb-3">
 					<div class="input-group-prepend">
 
 					</div>
-					<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="I am studying English">
+					<input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="Tell me what you are doing">
 				</div>
 
-				<a class="nav-link" href="#"><img id="micro" src="../image/micro.png"></a>
+				<a class="nav-link" href="#"><img id="micro" src="../image/micro.png" height="50px"></a>
 			</div>
 		</div>
 		<script type="text/javascript" src="asset/libs/three/three.min.js"></script>
