@@ -1,6 +1,6 @@
 # AR CLOCK for life
 ## Description
-AR CLOCK for life is a Daily Life Visualization Web Application that records your daily activity and helps with your life's plan. This is designed for IOS Device (Best with iPhone 6/7/8)
+AR CLOCK for life is a Daily Life Visualization Web Application that records your daily activity and helps with your life's plan. This is designed for iOS Device (best experience with iPhone 6/7/8)
 
 ## Highlights
  - You can talk to or type on AR Clock to signal the start or stop of activities and it will record accordingly
