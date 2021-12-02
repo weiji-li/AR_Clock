@@ -10,7 +10,7 @@ AR CLOCK for life is a Daily Life Visualization Web Application that records you
 
 ## How to install
 Download the full package on GitHub repositories or click
-> https://crystor9.github.io/HackShanghai/
+> weiji-li.github.io/ar_clock/
 
 ## How to use
  - register with your email and input your birthday and expected life expectancy
